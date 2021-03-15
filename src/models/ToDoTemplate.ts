@@ -24,9 +24,27 @@ export class ToDoTemplate {
 		this.container.append(cont);
 	}
 
-	renderShoppingItem(item: ShoppingList) {
+	renderAndAddShoppingItem(item: ShoppingList) {
+		const shoppingListForm = document.querySelector(
+			'#shopping-list-form'
+		) as HTMLFormElement;
+		const qtyDone = shoppingListForm.querySelector('input')!;
+		const itemDone = shoppingListForm.querySelector('select')!;
+
+		// Removes disabled attribute when an initial item was added to shopping list
+		qtyDone.disabled = qtyDone.disabled && false;
+		itemDone.disabled = itemDone.disabled && false;
+
+		// Creating an li to render to DOM
 		const li = document.createElement('li');
 		li.innerText = item.format();
+
+		// Creating an option value inside the shopping list dropdown
+		const opt = document.createElement('option');
+		opt.value = item.details;
+		opt.innerText = item.details;
+
+		itemDone.append(opt);
 
 		this.container.append(li);
 	}

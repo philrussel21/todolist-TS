@@ -30,7 +30,7 @@ form.addEventListener('submit', (e) => {
         todo = new ShoppingList(details.value, qty.valueAsNumber);
         const shopList = new ToDoTemplate(shoppingUL);
         // Renders the Shopping Item to the DOM
-        shopList.renderShoppingItem(todo);
+        shopList.renderAndAddShoppingItem(todo);
     }
     // Clears the details input field after submission
     details.value = '';
