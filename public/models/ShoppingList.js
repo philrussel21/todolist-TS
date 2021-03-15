@@ -9,7 +9,7 @@ export class ShoppingList {
         return this.qty;
     }
     format() {
-        return `${this.qty} x ${this.details}`;
+        return `<span class="qty">${this.qty}</span> x ${this.details}`;
     }
     isShopDone() {
         this.isDone = this.qty <= 0;

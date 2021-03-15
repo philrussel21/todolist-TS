@@ -28,7 +28,10 @@ export class ToDoTemplate {
         itemDone.disabled = itemDone.disabled && false;
         // Creating an li to render to DOM
         const li = document.createElement('li');
-        li.innerText = item.format();
+        // Adds the details as the ID to the li for referencing when done
+        li.id = item.details;
+        // Has to use innerHTML for span
+        li.innerHTML = item.format();
         // Creating an option value inside the shopping list dropdown
         const opt = document.createElement('option');
         opt.value = item.details;
