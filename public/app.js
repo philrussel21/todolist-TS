@@ -23,11 +23,16 @@ form.addEventListener('submit', (e) => {
     if (type === 'chores') {
         todo = new Chore(details.value);
         const choreList = new ToDoTemplate(choreUL);
+        // Renders the Chore to the DOM
         choreList.renderChore(todo);
     }
     else {
         todo = new ShoppingList(details.value, qty.valueAsNumber);
+        const shopList = new ToDoTemplate(shoppingUL);
+        // Renders the Shopping Item to the DOM
+        shopList.renderShoppingItem(todo);
     }
+    // Clears the details input field after submission
     details.value = '';
     qty.value = '';
 });
