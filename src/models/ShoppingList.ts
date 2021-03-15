@@ -11,8 +11,8 @@ export class ShoppingList implements HasDetails {
 		return this.qty;
 	}
 
-	getQty(): string {
-		return `${this.qty}`;
+	format(): string {
+		return `${this.qty} x ${this.details}`;
 	}
 
 	isShopDone(): boolean {

@@ -8,8 +8,8 @@ export class ShoppingList {
         this.qty = -num;
         return this.qty;
     }
-    getQty() {
-        return `${this.qty}`;
+    format() {
+        return `${this.qty} x ${this.details}`;
     }
     isShopDone() {
         this.isDone = this.qty <= 0;

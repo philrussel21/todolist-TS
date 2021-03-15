@@ -25,20 +25,9 @@ export class ToDoTemplate {
 	}
 
 	renderShoppingItem(item: ShoppingList) {
-		const cont = document.createElement('div');
-		const form = document.createElement('form');
-		const qty = document.createElement('input');
-		const label = document.createElement('label');
-		const btn = document.createElement('button');
-		qty.type = 'number';
-		qty.id = item.details;
-		qty.value = item.getQty();
-		label.htmlFor = item.details;
-		label.innerText = item.details;
-		btn.innerText = 'DONE';
+		const li = document.createElement('li');
+		li.innerText = item.format();
 
-		form.append(qty, label, btn);
-		cont.append(form);
-		this.container.append(cont);
+		this.container.append(li);
 	}
 }

@@ -15,7 +15,9 @@ h1 {
 }
 ul {
 	padding: 0;
-	list-style-type: none;
+	color: #006400;
+	margin: 0;
+	font-size: 1.5rem;
 }
 ul label {
 	display: inline-block;
