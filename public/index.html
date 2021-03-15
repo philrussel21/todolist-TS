@@ -1,0 +1,46 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TS TODO</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<main>
+			<h1>TODO App with TS</h1>
+			<form class="new-item-form">
+				<div class="field">
+					<label>TODO</label>
+					<select id="todo">
+						<option value="chores" selected>Chore</option>
+						<option value="shopping-list">Shopping List</option>
+					</select>
+				</div>
+				<div class="field">
+					<label>Details:</label>
+					<input type="text" id="details" />
+				</div>
+				<div class="field">
+					<label>Quantity</label>
+					<input type="number" id="qty" disabled />
+				</div>
+				<button>Add TODO</button>
+			</form>
+
+			<a href="philantiporda.netlify.app/">Phil Antiporda</a>
+		</main>
+		<div class="wrapper">
+			<!-- output list -->
+			<div class="chore-div">
+				<h2>Chores TODO:</h2>
+				<ul class="chore-list"></ul>
+			</div>
+			<div class="chore-div">
+				<h2>Shopping TODO:</h2>
+				<ul class="shopping-list"></ul>
+			</div>
+		</div>
+
+		<script type="module" src="app.js"></script>
+	</body>
+</html>
